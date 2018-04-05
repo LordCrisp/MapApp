@@ -74,7 +74,16 @@
     <!-- Google Maps API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVtKIer0-4uylF3NuXaDL08szZ3_d91Xw&libraries=places&callback=initAutocomplete"
         async defer></script>
-
+<!-- App Service Worker -->
+<script>
+    if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('app/service_worker.js')
+        .then(
+            function() {
+                console.log("Service Worker Registered");
+            });
+}</script>
 <!-- JAVASCRIPTS (end) -->
 
 </body>
