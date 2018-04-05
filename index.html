@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <!-- App Manifest File -->
+    <link rel="manifest" href="manifest.json">
+    <!-- iOS App Stuff -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MapApp">
+    <link rel="apple-touch-icon" href="assets/img/icons/icon-transparent-152.png">
+    <!-- Windows App Stuff -->
+    <meta name="msapplication-TileImage" content="assets/img/icons/icon-transparent-192.png">
+    <meta name="msapplication-TileColor" content="#4ED96D">
+    <!-- Normal HTML Stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#42b85d" id="theme_color">
+    <title>MapApp</title>
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+
+<!-- BODY (start) -->
+<body class="body__main">
+<!-- LOADER (start) -->
+
+<div class="loader__main">
+    <div class="loader__image">
+        <img src="assets/img/loader.png">
+    </div>
+</div>
+<!-- LOADER (end) -->
+
+<!-- HEADER (start) -->
+<header class="header__main">
+    <form class="header__form">
+        <input type="search" name="search" placeholder="find sted..." class="header__form--input" id="search-location">
+        <label class="header__form--label"><i class="material-icons">search</i></label>
+    </form>
+</header>
+<!-- HEADER (end) -->
+
+<button type="submit" name="directions" class="header__form--button">Rutevejledning <i class="material-icons">navigation</i></button>
+
+<!-- GOOGLE MAP AREA (start) -->
+<main class="map__main" id="map-main">
+
+</main>
+<!-- GOOGLE MAP AREA (end) -->
+
+
+<!-- JAVASCRIPTS (start) -->
+
+    <!-- jQuery CDN -->
+<script rel="script" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Loader Script -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".loader__main").remove();
+    });
+</script>
+
+    <!-- Maps Initiation -->
+<script rel="script" src="assets/js/maps.js"></script>
+    <!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVtKIer0-4uylF3NuXaDL08szZ3_d91Xw&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+<!-- JAVASCRIPTS (end) -->
+
+</body>
+<!-- BODY (end) -->
+</html>

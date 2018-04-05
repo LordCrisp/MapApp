@@ -1,0 +1,128 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+body, input, button {
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+input::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.loader__main {
+    position: absolute;
+    background-color: #4ED96D;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+}
+
+.loader__image {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__main {
+    /*height: 66px;*/
+    padding-top: env(safe-area-inset-top);
+    background-color: #4ED96D;
+}
+
+.header__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 18px 0;
+    padding-top: 12px;
+}
+
+.header__form--input {
+    width: calc(100% - 26px);
+    background-color: #42b85d;
+    border: none;
+    border-radius: 3px;
+    padding-left: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* - Placeholder color changer area (start) - */
+.header__form--input::placeholder  { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(256, 256, 256, 0.6);
+    opacity: 1; /* Firefox */
+}
+
+.header__form--input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(256 256 256 0.6);
+}
+
+.header__form--input::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(256 256 256 0.6);
+}
+/* - Placeholder color changer area (end) - */
+
+.header__form--input:focus {
+    outline: none;
+}
+
+.header__form--label i {
+    line-height: 36px;
+    margin-left: -30px;
+}
+
+.header__form--button {
+    position: absolute;
+    z-index: 999;
+    bottom: 20px;
+    right: 20px;
+    padding: 0 8px 0 12px;
+    border-radius: 3px;
+    background-color: #53F577;
+    font-size: 18px;
+    line-height: 46px;
+    border: none;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+
+.header__form--button i {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+#map-main {
+    height: calc(100% - 66px);
+}
+
+/* --------------------------------------------------- */
+/* --------------- Desktop Styles Area --------------- */
+/* --------------------------------------------------- */
+@media screen and (min-width: 800px) {
+    .header__form--input {
+        width: 400px;
+        font-size: 14px;
+    }
+
+    .header__form--label i {
+        font-size: 22px;
+    }
+
+    .header__form--button {
+        font-size: 14px;
+        line-height: 40px;
+        bottom: auto;
+        top: 11px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    }
+}
