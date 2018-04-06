@@ -10,5 +10,6 @@ self.addEventListener('fetch', function (evt) {
         );
     }
 } );
-
-console.log("Fisk");
+function(){
+    console.log("Fisk");
+}
