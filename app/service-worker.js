@@ -2,8 +2,8 @@
 
 var cacheName = 'MapAppCache';
 var filesToCache = [
-    "index.html"
-];
+    "MapApp/index.html"
+]
 
 //Install Service Worker and Cache App Content
 self.addEventListener('install', function(e) {
