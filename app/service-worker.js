@@ -1,4 +1,4 @@
-
+console.log("Hamster");
 //Service Worker Fetch for offline
 self.addEventListener('fetch', function (evt) {
     if (event.request.url.indexOf('https://maps.googleapi.com/js') == 0) {
@@ -12,3 +12,4 @@ self.addEventListener('fetch', function (evt) {
         );
     }
 } );
+
