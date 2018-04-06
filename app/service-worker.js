@@ -7,7 +7,7 @@ var filesToCache = [
 
 //Install Service Worker and Cache App Content
 self.addEventListener('install', function(event) {
-    console.log('Service Worker installing.');
+    console.log('Service Worker Installing.');
     event.waitUntil(
         caches.open(cacheName).then(function (cache) {
             console.log('Service Worker Caching App Shell');
@@ -16,23 +16,18 @@ self.addEventListener('install', function(event) {
     )
 });
 
-//
+//Service Worker Activation
 self.addEventListener('activate', function(event) {
-    console.log('Service Worker activating.');
+    console.log('Service Worker Activating.');
 });
 
+//Service Worker Fetch for offline
 self.addEventListener('fetch', function (event) {
     console.log('Service Worker Fetching App Data', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
             return response || fetch(event.request);
-        }
-        )
+        })
     )
 })
-
-//Service Worker Fetch for offline
-self.addEventListener('fetch', function (event) {
-
-} );
 
