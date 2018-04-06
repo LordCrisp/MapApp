@@ -43,8 +43,8 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-w
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 18px 0;
-    padding-top: 12px;
+    padding: 14px 0;
+    /*padding-top: 12px;*/
 }
 
 .header__form--input {
