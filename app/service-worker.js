@@ -2,7 +2,11 @@ console.log("Hamster");
 
 var cacheName = 'MapAppCache';
 var filesToCache = [
-
+    "/",
+    "/index.html",
+    "/assets/css/master.css",
+    "/assets/js/loader.js",
+    "/assets/js/maps.js"
 ]
 
 //Install Service Worker and Cache App Content
