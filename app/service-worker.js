@@ -1,12 +1,12 @@
 //Service Worker Installer
 self.addEventListener('install', function(event) {
     console.log('Service Worker installing.');
-});
+})
 
 //Service Worker Activation
 self.addEventListener('activate', function(event) {
     console.log('Service Worker activating.');
-});
+})
 
 //Service Worker Fetch for offline
 /*self.addEventListener('fetch', function (evt) {
