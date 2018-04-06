@@ -9,7 +9,7 @@ self.addEventListener('activate', function(event) {
 });*/
 
 //Service Worker Fetch for offline
-self.addEventListener('fetch', function (evt) {
+/*self.addEventListener('fetch', function (evt) {
     if (event.request.url.indexOf('https://maps.googleapi.com/js') == 0) {
         event.respondWith(
             // Handle Maps API requests in a generic fashion,
