@@ -2,10 +2,10 @@
 
 var cacheName = 'MapAppCache';
 var filesToCache = [
-    "MapApp/",
-    "MapApp/index.html",
-    "MapApp/assets/css/master.css",
-    "MapApp/assets/js/loader.js"
+    "",
+    "index.html",
+    "assets/css/master.css",
+    "assets/js/loader.js"
 ];
 
 //Install Service Worker and Cache App Content
